@@ -52,10 +52,10 @@ export default function CustomCursor() {
           key={ripple.id}
           className="pointer-events-none fixed z-[9998] rounded-full animate-ripple"
           style={{
-            left: ripple.x - 12,
-            top: ripple.y - 12,
-            width: 24,
-            height: 24,
+            left: ripple.x - 14,
+            top: ripple.y - 14,
+            width: 28,
+            height: 28,
             background: "rgba(26, 83, 173, 0.4)",
           }}
         />
@@ -68,6 +68,7 @@ export default function CustomCursor() {
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
       >
+        {/* Mid-size cursor */}
         <div className="relative w-5 h-5">
           {/* Outer Light Border */}
           <div
@@ -80,7 +81,7 @@ export default function CustomCursor() {
 
           {/* Inner Dark Body */}
           <div
-            className="absolute inset-[1.5px]"
+            className="absolute inset-[2px]"
             style={{
               background: "linear-gradient(135deg, #0f172a, #1e3a8a)",
               clipPath: "polygon(0 0, 100% 50%, 55% 60%, 35% 100%, 30% 65%)",

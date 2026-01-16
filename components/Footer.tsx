@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Right: Social */}
         <div className="flex items-center gap-3 mt-4 md:mt-0">
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/prabhjot-singh-008a0a2aa/"
             target="_blank"
             className="w-9 h-9 flex items-center justify-center border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition"
           >

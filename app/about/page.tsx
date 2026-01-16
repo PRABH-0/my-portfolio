@@ -113,14 +113,6 @@ export default function AboutPage() {
                 <span className="text-gray-500">@PRABH-0</span>
               </a>
 
-              <a
-                href="https://twitter.com/yourhandle"
-                target="_blank"
-                className="flex items-center justify-between px-5 py-3 border border-gray-200 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition cursor-none"
-              >
-                <span>Twitter</span>
-                <span className="text-gray-500">@yourhandle</span>
-              </a>
 
             </div>
              {/* Left: Text */}

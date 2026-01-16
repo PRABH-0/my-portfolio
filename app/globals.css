@@ -13,15 +13,14 @@ body {
   
   background: linear-gradient(
     -45deg,
-    #ff9a9e,  /* Coral Pink */
-    #fad0c4,  /* Peach */
-    #fad0c4,  /* Peach (duplicate for smooth transition) */
-    #a1c4fd,  /* Sky Blue */
-    #c2e9fb,  /* Light Blue */
-    #d4fc79,  /* Lime Green */
-    #96e6a1,  /* Mint */
-    #fbc2eb,  /* Pink */
-    #a6c1ee    /* Lavender */
+    #ffd6e7,  /* Soft Pink */
+    #fff0b3,  /* Light Yellow */
+    #b5ead7,  /* Mint Green */
+    #a8d8ea,  /* Sky Blue */
+    #d9b8ff,  /* Lavender */
+    #ffccd5,  /* Blush Pink */
+    #c7f9cc,  /* Pastel Green */
+    #caf0f8   /* Light Cyan */
   );
   background-size: 300% 300%;
   cursor: none;
@@ -41,63 +40,24 @@ code, pre {
 @keyframes gradientBG {
   0% { 
     background-position: 0% 50%; 
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background: linear-gradient(-45deg, #ffd6e7, #fff0b3, #b5ead7, #a8d8ea);
   }
   25% { 
     background-position: 50% 50%; 
-    background: linear-gradient(-45deg, #fad0c4, #a1c4fd, #c2e9fb, #d4fc79);
+    background: linear-gradient(-45deg, #fff0b3, #b5ead7, #a8d8ea, #d9b8ff);
   }
   50% { 
     background-position: 100% 50%; 
-    background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #d4fc79, #96e6a1);
+    background: linear-gradient(-45deg, #b5ead7, #a8d8ea, #d9b8ff, #ffccd5);
   }
   75% { 
     background-position: 50% 100%; 
-    background: linear-gradient(-45deg, #c2e9fb, #d4fc79, #96e6a1, #fbc2eb);
+    background: linear-gradient(-45deg, #a8d8ea, #d9b8ff, #ffccd5, #c7f9cc);
   }
   100% { 
     background-position: 0% 50%; 
-    background: linear-gradient(-45deg, #d4fc79, #96e6a1, #fbc2eb, #a6c1ee);
+    background: linear-gradient(-45deg, #d9b8ff, #ffccd5, #c7f9cc, #caf0f8);
   }
-}
-
-/* Alternative: Even faster animation with more colors */
-@keyframes fastGradientBG {
-  0% { background-position: 0% 0%; }
-  25% { background-position: 100% 0%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 0% 100%; }
-  100% { background-position: 0% 0%; }
-}
-
-/* Optional: Add a subtle pulse effect */
-@keyframes pulseBackground {
-  0% { opacity: 1; }
-  50% { opacity: 0.95; }
-  100% { opacity: 1; }
-}
-
-body {
-  animation: 
-    gradientBG 12s ease infinite,
-    pulseBackground 8s ease-in-out infinite;
-}
-
-/* For a different speed, use this class instead */
-.fast-gradient {
-  background: linear-gradient(
-    -45deg,
-    #ff6b6b, /* Bright Red */
-    #ff9f68, /* Orange */
-    #ffd166, /* Yellow */
-    #06d6a0, /* Emerald */
-    #118ab2, /* Blue */
-    #073b4c, /* Dark Blue */
-    #7209b7, /* Purple */
-    #f72585  /* Pink */
-  );
-  background-size: 300% 300%;
-  animation: fastGradientBG 8s ease infinite;
 }
 
 /* ================= CLICK RIPPLE EFFECT ================= */
@@ -118,32 +78,4 @@ body {
 
 .animate-ripple {
   animation: ripple 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* Optional: Add a subtle shimmer effect to the gradient */
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-.shimmer-bg {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite linear;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: -1;
 }
