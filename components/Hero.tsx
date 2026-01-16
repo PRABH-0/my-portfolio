@@ -386,7 +386,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 function Skill({ icon, label }: { icon: string; label: string }) {
   return (
-    <div className="flex items-center gap-3 px-5 py-2 bg-gray-100 rounded-full">
+    <div className="flex items-center gap-3 pr-8 pl-4 py-1 bg-gray-100 rounded-full">
       <Image src={icon} alt={label} width={20} height={20} />
       <span className="text-gray-800">{label}</span>
     </div>
