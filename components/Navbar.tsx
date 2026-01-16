@@ -70,7 +70,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/Prabh_Resume.pdf"
+                href="/Prabh.pdf"
                 target="_blank"
                 className="hover:opacity-70 transition cursor-none"
               >
@@ -127,7 +127,7 @@ export default function Navbar() {
             </Link>
 
             <a
-              href="/Prabh_Resume.pdf"
+              href="/Prabh.pdf"
               target="_blank"
               onClick={() => setIsOpen(false)}
               className="block hover:opacity-70 transition cursor-none"
