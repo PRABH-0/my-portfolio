@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Playfair_Display, Geist } from "next/font/google";
 
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -17,7 +18,7 @@ export default function Hero() {
   const trackRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef(0);
   const isPaused = useRef(false);
-
+const [openIndex, setOpenIndex] = useState<number | null>(null);
   // Project images for carousel
   const projectImages = [
     "/snera images/snera-1.png",
@@ -170,7 +171,7 @@ export default function Hero() {
           <div className="w-full md:w-1/2">
             <div className="rounded-xl overflow-hidden border border-gray-200">
               <Image
-                src="/experience.jpg"
+                src="/Pizone.jpeg"
                 alt="Work Experience"
                 width={600}
                 height={400}
@@ -273,7 +274,113 @@ export default function Hero() {
           </div>
         </div>
       </section>
+     {/* ================= CURIOUS ================= */}
+<section className="pt-[60px] pb-24">
+  <hr className="border-gray-300 mb-12" />
+
+  <h2
+    className={`${playfair.className} text-3xl font-semibold text-gray-900 mb-8 pl-20`}
+  >
+    Curious?
+  </h2>
+
+  <div className="max-w-6xl mx-auto px-6 space-y-4">
+    
+    {/* Item 1 */}
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setOpenIndex(openIndex === 0 ? null : 0)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left text-gray-600 font-medium bg-white hover:bg-gray-50 transition cursor-none"
+      >
+        <span className={playfair.className}>
+          How do you approach scalable application design?
+        </span>
+        <span className="text-xl text-gray-500">
+          {openIndex === 0 ? "−" : "+"}
+        </span>
+      </button>
+
+      {openIndex === 0 && (
+        <div className="px-5 pb-4 text-sm text-gray-500 leading-relaxed">
+          I focus on modular architecture, separating frontend and backend responsibilities,
+          and designing APIs that scale with user demand while keeping performance and maintainability in mind.
+        </div>
+      )}
     </div>
+
+
+    {/* Item 3 */}
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setOpenIndex(openIndex === 2 ? null : 2)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left text-gray-600 font-medium bg-white hover:bg-gray-50 transition cursor-none"
+      >
+        <span className={playfair.className}>
+          How do you handle real-world project challenges?
+        </span>
+        <span className="text-xl text-gray-500">
+          {openIndex === 2 ? "−" : "+"}
+        </span>
+      </button>
+
+      {openIndex === 2 && (
+        <div className="px-5 pb-4 text-sm text-gray-500 leading-relaxed">
+          I break problems into smaller tasks, debug step by step, research best practices,
+          and collaborate closely with teammates to deliver stable and reliable solutions.
+        </div>
+      )}
+    </div>
+
+    {/* Item 4 */}
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setOpenIndex(openIndex === 3 ? null : 3)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left text-gray-600 font-medium bg-white hover:bg-gray-50 transition cursor-none"
+      >
+        <span className={playfair.className}>
+          How do you choose the right technology for a project?
+        </span>
+        <span className="text-xl text-gray-500">
+          {openIndex === 3 ? "−" : "+"}
+        </span>
+      </button>
+
+      {openIndex === 3 && (
+        <div className="px-5 pb-4 text-sm text-gray-500 leading-relaxed">
+          I choose tools based on scalability, maintainability, project requirements, and team experience.
+          For example, Angular or Next.js for modern UIs and .NET or Laravel for reliable backend services.
+        </div>
+      )}
+    </div>
+
+    {/* Item 5 */}
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setOpenIndex(openIndex === 4 ? null : 4)}
+        className="w-full flex items-center justify-between px-5 py-4 text-left text-gray-600 font-medium bg-white hover:bg-gray-50 transition cursor-none"
+      >
+        <span className={playfair.className}>
+          How do you continue learning and improving as a developer?
+        </span>
+        <span className="text-xl text-gray-500">
+          {openIndex === 4 ? "−" : "+"}
+        </span>
+      </button>
+
+      {openIndex === 4 && (
+        <div className="px-5 pb-4 text-sm text-gray-500 leading-relaxed">
+          I keep improving by building projects, exploring new frameworks, reading documentation,
+          and solving real-world problems. I regularly reflect on my work to write better and more efficient code.
+        </div>
+      )}
+    </div>
+
+  </div>
+</section>
+
+
+    </div>
+    
   );
 }
 

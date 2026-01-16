@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 
 export default function Home() {
   return (
-    <div className="bg-white backdrop-blur-md border border-gray-300 mx-[40px] ">
+    <div className="min-h-screen bg-white backdrop-blur-md border-x border-gray-300 mx-[40px]">
       <Hero />
     </div>
   );
