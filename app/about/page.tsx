@@ -58,7 +58,7 @@ export default function AboutPage() {
             <div className="flex justify-center">
               <div className="w-64 h-64 rounded-2xl overflow-hidden border border-gray-200">
                 <Image
-                  src="/Prabh (1).jpg"
+                  src="/Prabh_Blue.jpeg"
                   alt="Prabhjot Singh"
                   width={256}
                   height={256}
